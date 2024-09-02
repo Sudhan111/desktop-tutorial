@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Application connector="sailpoint.connector.JDBCConnector" featuresString="DISCOVER_SCHEMA, PROVISIONING, SYNC_PROVISIONING, DIRECT_PERMISSIONS, SEARCH, ENABLE, UNLOCK" icon="databaseIcon" name="JDBC 001" profileClass="" type="JDBC">
+  <AccountCorrelationConfig>
+    <Reference class="sailpoint.object.CorrelationConfig" name="Email co-relation"/>
+  </AccountCorrelationConfig>
+  <Attributes>
+    <Map>
+      <entry key="SQL" value="SELECT * FROM iiq_empdet.empdetails;"/>
+      <entry key="acctAggregationEnd">
+        <value>
+          <Date>1712764348856</Date>
+        </value>
+      </entry>
+      <entry key="acctAggregationStart">
+        <value>
+          <Date>1712764348756</Date>
+        </value>
+      </entry>
+      <entry key="afterProvisioningRule" value="APP"/>
+      <entry key="aggregationMode">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="beforeProvisioningRule" value="OracleBeforeProvisioningPlan"/>
+      <entry key="compositeDefinition"/>
+      <entry key="connMaxRetry" value="3"/>
+      <entry key="connRetryEnable">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="connWaitTimeForRetry" value="2"/>
+      <entry key="deltaTable"/>
+      <entry key="dept.SQL" value="SELECT * FROM iiq_empdet.accesstable"/>
+      <entry key="dept.aggregationMode">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="dept.deltaTable"/>
+      <entry key="dept.driverClass" value="com.mysql.cj.jdbc.Driver"/>
+      <entry key="dept.getDeltaSQL"/>
+      <entry key="dept.getDirectPermObjectSQL"/>
+      <entry key="dept.getObjectSQL"/>
+      <entry key="dept.isPermissionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="dept.mergeRows">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="dept.password" value="1:ACP:6RM7Z2Dn0lTOWXh6C37B8OzOVRJN1kj1ocdhC0cBhn4="/>
+      <entry key="dept.url" value="jdbc:mysql://localhost/iiq_empdet"/>
+      <entry key="dept.useExecuteQuery">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="dept.useStoredProcedureDelta">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="dept.useStoredProcedureDirectPermission">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="dept.useStoredProcedureGetObject">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="dept.useStoredProcedureSqlStmt">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="dept.user" value="root"/>
+      <entry key="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+      <entry key="getDeltaSQL"/>
+      <entry key="getObjectSQL" value="select * from iiq_empdet.empdetailswhere id='$(identity)'*"/>
+      <entry key="isPermissionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="jdbcDeleteProvisioningRule" value="ignitioncheck01"/>
+      <entry key="jdbcDisableProvisioningRule" value="ignitioncheck01"/>
+      <entry key="jdbcExceptionBucketing">
+        <value>
+          <Boolean>true</Boolean>
+        </value>
+      </entry>
+      <entry key="jdbcModifyProvisioningRule" value="Modify rule"/>
+      <entry key="managerCorrelationFilter">
+        <value>
+          <Filter operation="EQ" property="email" value="ManagerEmail"/>
+        </value>
+      </entry>
+      <entry key="mergeRows">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionAttributeScope" value="entitlements"/>
+      <entry key="nativeChangeDetectionAttributes"/>
+      <entry key="nativeChangeDetectionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionOperations"/>
+      <entry key="partitionMode">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="partitionStatements"/>
+      <entry key="password" value="1:ACP:bJKHuDD1bMVf4/TsoJYpzqeZlbJnNK9/HwvWIgC2RFA="/>
+      <entry key="provisionRule" value="operationRule"/>
+      <entry key="sysDescriptions">
+        <value>
+          <Map>
+            <entry key="en_US"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="templateApplication" value="JDBC Template"/>
+      <entry key="testConnSQL" value="SELECT * FROM iiq_empdet.empdetails;"/>
+      <entry key="url" value="jdbc:mysql://localhost/iiq_empdet"/>
+      <entry key="useExecuteQuery">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureDelta">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureDirectPermission">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureGetObject">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedurePartition">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureSqlStmt">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureTestConn">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="user" value="root"/>
+    </Map>
+  </Attributes>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+  <Schemas>
+    <Schema displayAttribute="Userid" identityAttribute="id" instanceAttribute="" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="id" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="Userid" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="FirstName" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="LastName" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="Age" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="Active" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="COMPANYNAME" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="COSTCENTERREFERENCEID" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="LWD" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="UniqueName" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="ManagerEmail" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="Roles" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="DN" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+    <Schema aggregationType="group" descriptionAttribute="" displayAttribute="Role" identityAttribute="RoleId" instanceAttribute="" nativeObjectType="dept" objectType="dept" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="RoleId" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="Role" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+  </Schemas>
+  <ApplicationScorecard/>
+</Application>

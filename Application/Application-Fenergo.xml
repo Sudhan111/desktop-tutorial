@@ -1,0 +1,1284 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Application connector="sailpoint.connector.webservices.WebServicesConnector" featuresString="PROVISIONING, ENABLE, PASSWORD, AUTHENTICATE, UNLOCK" name="Fenergo" profileClass="" type="Web Services">
+  <AccountCorrelationConfig>
+    <Reference class="sailpoint.object.CorrelationConfig" name="Fenergo Correlation Config"/>
+  </AccountCorrelationConfig>
+  <Attributes>
+    <Map>
+      <entry key="acctAggregationEnd">
+        <value>
+          <Date>1708235763106</Date>
+        </value>
+      </entry>
+      <entry key="acctAggregationStart">
+        <value>
+          <Date>1708235693080</Date>
+        </value>
+      </entry>
+      <entry key="afterProvisioningRule"/>
+      <entry key="authenticationMethod" value="OAuth2Login"/>
+      <entry key="beforeProvisioningRule"/>
+      <entry key="clientCertAuthEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="client_id" value="investcorp-sdlc-dev"/>
+      <entry key="client_secret" value="1:ACP:GIotxrrWoEsXCJeIY4AHtT76gRisqKPm3fguFl34cObyxdt0q9Ad83Dpi23qu4BXQA3tRNW9VK1v83p5IOJycw=="/>
+      <entry key="compositeDefinition"/>
+      <entry key="connectionParameters">
+        <value>
+          <List>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/authorizationquery/api/user?page[number]=1&amp;page[size]=2"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="accept" value="*/*"/>
+                    <entry key="content-type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Test Connection"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj"/>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath"/>
+              <entry key="sequenceNumberForEndpoint" value="1"/>
+              <entry key="uniqueNameForEndPoint" value="Test connection"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/authorizationquery/api/user"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="content-type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Account Aggregation"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="email" value="email"/>
+                    <entry key="id" value="id"/>
+                    <entry key="username" value="username"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$.data[*]"/>
+              <entry key="sequenceNumberForEndpoint" value="2"/>
+              <entry key="uniqueNameForEndPoint" value="Account Aggregation Fenex Id"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule" value="Fenergo_Before_Operation_Rule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody" value="{&#13;&#10;     &quot;schemas&quot;: [&quot;urn:ietf:params:scim:api:messages:2.0:SearchRequest&quot;],&#13;&#10;     &quot;attributes&quot;: [&quot;id&quot;,&quot;name&quot;],&#13;&#10;     &quot;filter&quot;: &quot;userName eq \&quot;$response.email$\&quot;&quot;&#13;&#10;       }"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/scim/Users/.search"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="content-type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="POST"/>
+              <entry key="operationType" value="Account Aggregation"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName" value="Account Aggregation Fenex Id"/>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="SCIM Id" value="id"/>
+                    <entry key="familyName" value="name.familyName"/>
+                    <entry key="givenName" value="name.givenName"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$.Resources[*]"/>
+              <entry key="sequenceNumberForEndpoint" value="3"/>
+              <entry key="uniqueNameForEndPoint" value="Account Aggregation SCIM"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/authorizationquery/api/user/$response.id$/authorization-profile"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="content-type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Account Aggregation"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName" value="Account Aggregation Fenex Id"/>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="accessLayers" value="accessLayers[*].id"/>
+                    <entry key="teams" value="teams[*].id"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$.data"/>
+              <entry key="sequenceNumberForEndpoint" value="4"/>
+              <entry key="uniqueNameForEndPoint" value="Account Aggregation Roles"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/authorizationquery/api/team"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="Content-Type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Group Aggregation"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="description" value="description"/>
+                    <entry key="id" value="id"/>
+                    <entry key="name" value="name"/>
+                    <entry key="scopes" value="scopes"/>
+                    <entry key="users" value="users"/>
+                    <entry key="version" value="version"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$.data[*]"/>
+              <entry key="sequenceNumberForEndpoint" value="5"/>
+              <entry key="uniqueNameForEndPoint" value="Group Aggregation Teams"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/authorizationquery/api/access-layer"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="Content-Type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Group Aggregation-Accesslayer"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="dataKey" value="dataKey"/>
+                    <entry key="dataType" value="dataType"/>
+                    <entry key="description" value="description"/>
+                    <entry key="id" value="id"/>
+                    <entry key="label" value="label"/>
+                    <entry key="name" value="name"/>
+                    <entry key="sensitiveDataKind" value="sensitiveDataKind"/>
+                    <entry key="type" value="type"/>
+                    <entry key="users" value="users"/>
+                    <entry key="version" value="version"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$.data[*]"/>
+              <entry key="sequenceNumberForEndpoint" value="6"/>
+              <entry key="uniqueNameForEndPoint" value="Group Aggregation AccessLayers"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule" value="Fenergo_AccAgg_After_Operation_Rule"/>
+              <entry key="beforeRule" value="Fenergo_Before_Operation_Rule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody" value="{&#13;&#10;  &quot;schemas&quot;: [&#13;&#10;    &quot;urn:ietf:params:scim:schemas:core:2.0:User&quot;&#13;&#10;  ],&#13;&#10;  &quot;userName&quot;: &quot;$plan.email$&quot;,&#13;&#10;  &quot;emails&quot;: [&#13;&#10;    {&#13;&#10;      &quot;type&quot;: &quot;work&quot;,&#13;&#10;      &quot;value&quot;: &quot;$plan.email$&quot;,&#13;&#10;      &quot;primary&quot;: true&#13;&#10;    }&#13;&#10;  ],&#13;&#10;  &quot;name&quot;: {&#13;&#10;    &quot;familyName&quot;: &quot;$plan.familyName$&quot;,&#13;&#10;    &quot;givenName&quot;: &quot;$plan.givenName$&quot;&#13;&#10;  }&#13;&#10;}"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/scim/Users"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="Content-Type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="POST"/>
+              <entry key="operationType" value="Create Account"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="email" value="emails[0].value"/>
+                    <entry key="familyName" value="name.familyName"/>
+                    <entry key="givenName" value="name.givenName"/>
+                    <entry key="id" value="id"/>
+                    <entry key="userName" value="userName"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$"/>
+              <entry key="sequenceNumberForEndpoint" value="7"/>
+              <entry key="uniqueNameForEndPoint" value="Create Account"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/authorizationcommand/api/team/$plan.teams$/user/$plan.nativeIdentity$"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="Content-Type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="PUT"/>
+              <entry key="operationType" value="Add Entitlement"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj"/>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>202</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath"/>
+              <entry key="sequenceNumberForEndpoint" value="8"/>
+              <entry key="uniqueNameForEndPoint" value="Add Entitlement Teams"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/authorizationcommand/api/access-layer/$plan.accessLayers$/user/$plan.nativeIdentity$"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="Content-Type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="PUT"/>
+              <entry key="operationType" value="Add Entitlement-Accesslayer"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj"/>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>202</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath"/>
+              <entry key="sequenceNumberForEndpoint" value="9"/>
+              <entry key="uniqueNameForEndPoint" value="Add Entitlement Accesslayers"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/authorizationcommand/api/team/$plan.teams$/user/$plan.nativeIdentity$"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="Content-Type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="DELETE"/>
+              <entry key="operationType" value="Remove Entitlement"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj"/>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>202</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath"/>
+              <entry key="sequenceNumberForEndpoint" value="10"/>
+              <entry key="uniqueNameForEndPoint" value="Remove Entitlement Teams"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/authorizationcommand/api/access-layer/$plan.accessLayers$/user/$plan.nativeIdentity$"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="Content-Type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="DELETE"/>
+              <entry key="operationType" value="Remove Entitlement-Accesslayer"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj"/>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>202</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath"/>
+              <entry key="sequenceNumberForEndpoint" value="11"/>
+              <entry key="uniqueNameForEndPoint" value="Remove Entitlement Accesslayers"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule" value="Fenergo_Before_Operation_Rule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody" value="{&#13;&#10;  &quot;schemas&quot;: [&#13;&#10;    &quot;urn:ietf:params:scim:schemas:core:2.0:User&quot;&#13;&#10;  ],&#13;&#10;  &quot;userName&quot;: &quot;$plan.email$&quot;,&#13;&#10;  &quot;emails&quot;: [&#13;&#10;    {&#13;&#10;      &quot;type&quot;: &quot;work&quot;,&#13;&#10;      &quot;value&quot;: &quot;$plan.email$&quot;,&#13;&#10;      &quot;primary&quot;: true&#13;&#10;    }&#13;&#10;  ],&#13;&#10;  &quot;name&quot;: {&#13;&#10;    &quot;familyName&quot;: &quot;$plan.familyName$&quot;,&#13;&#10;    &quot;givenName&quot;: &quot;$plan.givenName$&quot;&#13;&#10;  }&#13;&#10;}"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/scim/Users"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="Content-Type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="POST"/>
+              <entry key="operationType" value="Enable Account"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="SCIM Id" value="id"/>
+                    <entry key="email" value="emails[0].value"/>
+                    <entry key="familyName" value="name.familyName"/>
+                    <entry key="givenName" value="name.givenName"/>
+                    <entry key="userName" value="userName"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$"/>
+              <entry key="sequenceNumberForEndpoint" value="12"/>
+              <entry key="uniqueNameForEndPoint" value="Enable Account"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule" value="Fenergo_Before_Operation_Rule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/scim/Users/$plan.nativeIdentity$"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Content-Type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="DELETE"/>
+              <entry key="operationType" value="Disable Account"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj"/>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>204</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath"/>
+              <entry key="sequenceNumberForEndpoint" value="13"/>
+              <entry key="uniqueNameForEndPoint" value="Disable Acccount"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule" value="Fenergo_Before_Operation_Rule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/scim/Users/$plan.nativeIdentity$"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Content-Type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="DELETE"/>
+              <entry key="operationType" value="Delete Account"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj"/>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>204</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath"/>
+              <entry key="sequenceNumberForEndpoint" value="14"/>
+              <entry key="uniqueNameForEndPoint" value="Delete Acccount"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/authorizationquery/api/user/$getobject.nativeIdentity$/profile"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="content-type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Get Object"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="email" value="email"/>
+                    <entry key="id" value="id"/>
+                    <entry key="username" value="username"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$.data"/>
+              <entry key="sequenceNumberForEndpoint" value="15"/>
+              <entry key="uniqueNameForEndPoint" value="Single Account Aggregation"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule" value="Fenergo_Before_Operation_Rule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody" value="{&#13;&#10;     &quot;schemas&quot;: [&quot;urn:ietf:params:scim:api:messages:2.0:SearchRequest&quot;],&#13;&#10;     &quot;attributes&quot;: [&quot;id&quot;,&quot;name&quot;],&#13;&#10;     &quot;filter&quot;: &quot;userName eq \&quot;$response.email$\&quot;&quot;&#13;&#10;       }"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/scim/Users/.search"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="content-type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="POST"/>
+              <entry key="operationType" value="Get Object"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName" value="Single Account Aggregation"/>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="SCIM Id" value="id"/>
+                    <entry key="familyName" value="name.familyName"/>
+                    <entry key="givenName" value="name.givenName"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$.Resources[*]"/>
+              <entry key="sequenceNumberForEndpoint" value="16"/>
+              <entry key="uniqueNameForEndPoint" value="Single Account Aggregation SCIM"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/authorizationquery/api/user/$getobject.nativeIdentity$/authorization-profile"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean/>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Accept" value="*/*"/>
+                    <entry key="content-type" value="application/json"/>
+                    <entry key="x-tenant-id" value="96ed329b-9eae-4554-aea7-61a91725c29c"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Get Object"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="accessLayers" value="accessLayers[0].id"/>
+                    <entry key="id" value="id"/>
+                    <entry key="teams" value="teams[0].id"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$.data"/>
+              <entry key="sequenceNumberForEndpoint" value="17"/>
+              <entry key="uniqueNameForEndPoint" value="Single Account Aggregation Roles"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+          </List>
+        </value>
+      </entry>
+      <entry key="createAccountWithEntReq">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="enableHasMore" value="true"/>
+      <entry key="enableStatus"/>
+      <entry key="encrypted" value="accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info"/>
+      <entry key="fixedPlanMultivaluedAttribute" value="true"/>
+      <entry key="genericWebServiceBaseUrl" value="https://api.fenergox.com"/>
+      <entry key="grant_type" value="CLIENT_CREDENTIALS"/>
+      <entry key="httpCookieSpecsStandard" value="true"/>
+      <entry key="isGetObjectRequiredForPTA">
+        <value>
+          <Boolean>true</Boolean>
+        </value>
+      </entry>
+      <entry key="lastAggregationDate_Accesslayer" value="2023-12-31T10:44:35Z"/>
+      <entry key="lastAggregationDate_account" value="2024-02-18T05:56:01Z"/>
+      <entry key="lastAggregationDate_group" value="2023-12-31T10:44:37Z"/>
+      <entry key="nativeChangeDetectionAttributeScope" value="entitlements"/>
+      <entry key="nativeChangeDetectionAttributes"/>
+      <entry key="nativeChangeDetectionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionOperations"/>
+      <entry key="oAuthJwtHeader">
+        <value>
+          <Map>
+            <entry key="alg" value="RS256"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="oAuthJwtPayload">
+        <value>
+          <Map>
+            <entry key="aud"/>
+            <entry key="exp" value="15f"/>
+            <entry key="iss"/>
+            <entry key="sub"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="oauth_token_info" value="1:ACP:eI482N9GA4yPEYHgutl3zW3qKXqe3l2Rwv6+cCFABG4Sjp5LR4hqjmDsUL/6TR/6vwriiz61PBzepq4qPqdrAHMgj+o4vkXb1gggp0fSyttk3gBlzm/nRZKQvaPZlAN5ubIQjte2gsLjDuZbxmHNjc8po3+m8IlaZCwLig/bNCWH/lZNb5FCsyHwCSIbO6HlK0CiTGPX13q7tfMrwFqU051wRqQt/O0zjHmewXKQ+iU26gmCE9DY421lm/hhQN+/layr5fg15CautSAyPjLJym1kwo1bNwaxcFF2ICdUAUa3sPAAXHZ94yAE69en1iK47lp51cuf8fPiGjoPE7928ICVfh5cMEa06qzg+f1inEImHSc+SYFUYr6NJwoayyVR3Cp16y3OBIU171rAAALNVnVy7CWV6FMag5s1reCSpsLcXECDYp+EkwqtWEtw9y5AWsKLGMmn6D4VDOs/SDuGORLB+CBzdo+ghxmBe4AZSU4DGFQN08qhsDhh8yFAd/lqJNXaBIvdBnqeAy7Zr8G41LIZRjcOmPkcxLXMql137kAjSvRvLTYGuL3r+jpDtCnAZ0URklKP8CzXxewVUQH6LlSZIG9GbGzcWhusVo8rd00jmZ33VJ2jeqHVxRiG29bjRdlouOv0l/dkg9MC090FvggJD0EKeo4eDCvjxQGZ+R3OyWN78PttQrA/XkfZ75HldtBKdme2CQYsZZMWy5qR+GbZnV7putrsDaOp2tnYJjwXZc8qvcWEp36gpyOmK+2iE/PhDicJ8EP+bQp7XxHpyh05+WvGVK2G6JV4JMEUR/jEI60IKbVZG40aRd4YsZbryxqj+rpWy4hKVXR0COAoFFeMeecWU2F/QP5LDn2qrSYKhlIC19TZLXKaMZubd1ScFl7Fcvy9l7hzPLp5TJcx8yTRccJ/xCCs0Hkw5Sl1PshtmCFuMgj2WM2DH/EoXdaPiXlllLNvy0G8RKyd4EQsZhG9m7O+lbpSB4gSVlwJ6VA+gQuiLQ9N+NOQeCWJZi9Utu5ToNput+pmjJsaFXjRSxkzQWI2sqMH2En/vWxz062a+YUo1dwohftWY8+R7do4vZEIz2U95PHDov8US/0Yt7m5NWNoxSHk+L7FxMRnroIpOXTLCghxU39NrupEG8H2VI+DMwYxkrSg1CTuNDKBsYhwPlCFApYstRRbGx05T75jkdcS+WFqn+dfgPXJ9Whs"/>
+      <entry key="private_key_to_update"/>
+      <entry key="saml_assertion_url"/>
+      <entry key="saml_request_body"/>
+      <entry key="sysDescriptions">
+        <value>
+          <Map>
+            <entry key="en_US"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="templateApplication" value="Web Services"/>
+      <entry key="throwProvAfterRuleException">
+        <value>
+          <Boolean>true</Boolean>
+        </value>
+      </entry>
+      <entry key="throwProvBeforeRuleException">
+        <value>
+          <Boolean>true</Boolean>
+        </value>
+      </entry>
+      <entry key="timeoutInSeconds"/>
+      <entry key="token_url" value="https://identity.fenergox.com/connect/token"/>
+      <entry key="version" value="v2"/>
+    </Map>
+  </Attributes>
+  <CustomizationRule>
+    <Reference class="sailpoint.object.Rule" name="Fenergo_Account_Customization_Rule"/>
+  </CustomizationRule>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="vchanda"/>
+  </Owner>
+  <ProvisioningForms>
+    <Form name="Fenergo Account Creation" objectType="account" type="Create">
+      <Attributes>
+        <Map>
+          <entry key="pageTitle" value="Fenergo Account Creation"/>
+        </Map>
+      </Attributes>
+      <Description>Fenergo Account Creation</Description>
+      <Section name="Section 1">
+        <Field displayName="Email" name="email" type="string">
+          <Script>
+            <Source>return identity.getEmail();</Source>
+          </Script>
+        </Field>
+        <Field displayName="First Name" name="givenName" type="string">
+          <Script>
+            <Source>return identity.getFirstname();</Source>
+          </Script>
+        </Field>
+        <Field displayName="Last Name" name="familyName" type="string">
+          <Script>
+            <Source>return identity.getLastname();</Source>
+          </Script>
+        </Field>
+      </Section>
+    </Form>
+    <Form name="Fenergo Account Enable" objectType="account" type="Enable">
+      <Attributes>
+        <Map>
+          <entry key="pageTitle" value="Fenergo Account Enable"/>
+        </Map>
+      </Attributes>
+      <Description>Fenergo Account Enable</Description>
+      <Section name="Section 1">
+        <Field displayName="Email" name="email" reviewRequired="true" type="string">
+          <Script>
+            <Source>return identity.getEmail();</Source>
+          </Script>
+        </Field>
+        <Field displayName="First Name" name="givenName" reviewRequired="true" type="string">
+          <Script>
+            <Source>return identity.getFirstname();</Source>
+          </Script>
+        </Field>
+        <Field displayName="Last Name" name="familyName" type="string">
+          <Script>
+            <Source>return identity.getLastname();</Source>
+          </Script>
+        </Field>
+      </Section>
+    </Form>
+  </ProvisioningForms>
+  <Schemas>
+    <Schema displayAttribute="email" groupAttribute="" identityAttribute="id" instanceAttribute="" nativeObjectType="user" objectType="account">
+      <AttributeDefinition name="id" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="username" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="email" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="teams" schemaObjectType="group" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="accessLayers" schemaObjectType="Accesslayer" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="givenName" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="familyName" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="SCIM Id" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+    <Schema aggregationType="group" descriptionAttribute="" displayAttribute="name" identityAttribute="id" instanceAttribute="" nativeObjectType="" objectType="Accesslayer">
+      <AttributeDefinition name="id" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="name" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="dataKey" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="label" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="description" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="type" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="dataType" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="sensitiveDataKind" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="version" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+    <Schema descriptionAttribute="" displayAttribute="name" identityAttribute="id" instanceAttribute="" nativeObjectType="group" objectType="group">
+      <AttributeDefinition name="id" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="name" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="description" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="scopes" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="version" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+  </Schemas>
+  <ApplicationScorecard/>
+</Application>
