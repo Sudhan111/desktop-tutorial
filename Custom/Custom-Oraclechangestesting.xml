@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Custom PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Custom created="1706768890446" id="c0a8024c8d581998818d635a7a4e1032" modified="1706858482011" name="OracleChangesTesting">
+  <Attributes>
+    <Map>
+      <entry key="EBS">
+        <value>
+          <List>
+            <String>UPDATE,RASHWIN,12,RASHWIN@YAHOO.COM,PWK,2024-02-01 16:24:42,Oracle Direct,success,The AQ_ADMINISTRATOR_ROLE Added for,RASHIVIN,empty</String>
+            <String>UPDATE,RASHWIN,12,RASHWIN@YAHOO.COM,PWK,2024-02-01 16:25:41,Oracle Direct,success,The AQ_ADMINISTRATOR_ROLE Removed for,RASHIVIN,Null</String>
+            <String>OFFBOARD,RASHWIN,12,RASHWIN@YAHOO.COM,PWK,2024-02-01 16:29:12,Oracle Direct,success,the account Deleted for the User,RASHIVIN,Null</String>
+          </List>
+        </value>
+      </entry>
+    </Map>
+  </Attributes>
+</Custom>
