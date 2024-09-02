@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Application connector="sailpoint.connector.DelimitedFileConnector" featuresString="DIRECT_PERMISSIONS, NO_RANDOM_ACCESS, DISCOVER_SCHEMA" icon="enterpriseIcon" name="checker" profileClass="spadmin" type="DelimitedFile">
+  <AccountCorrelationConfig>
+    <Reference class="sailpoint.object.CorrelationConfig" name="oracleCo-relation"/>
+  </AccountCorrelationConfig>
+  <Attributes>
+    <Map>
+      <entry key="PassphraseForPrivateKey"/>
+      <entry key="PrivateKeyFilePath"/>
+      <entry key="afterProvisioningRule"/>
+      <entry key="beforeProvisioningRule"/>
+      <entry key="compositeDefinition"/>
+      <entry key="delimiter" value=","/>
+      <entry key="file" value="C:\Sailpoint_IIQ_Materials\delimitedFile\employee.txt"/>
+      <entry key="filetransport" value="local"/>
+      <entry key="filterEmptyRecords">
+        <value>
+          <Boolean>true</Boolean>
+        </value>
+      </entry>
+      <entry key="ftpsAuthMethod" value="password"/>
+      <entry key="ftpsClientCertificateFilePath"/>
+      <entry key="ftpsClientCertificatePassphrase"/>
+      <entry key="group.filetransport" value="local"/>
+      <entry key="group.filterEmptyRecords">
+        <value>
+          <Boolean>true</Boolean>
+        </value>
+      </entry>
+      <entry key="group.hasHeader">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="group.isCaseInsensitiveMerge">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="group.isSortedByIndexColumn">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="group.mergeRows">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="group.partitionMode" value="auto"/>
+      <entry key="group.stopIfLineHasWrongColumnLength">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="hasHeader">
+        <value>
+          <Boolean>true</Boolean>
+        </value>
+      </entry>
+      <entry key="isCaseInsensitiveMerge">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="isSortedByIndexColumn">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="mergeRows">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionAttributeScope" value="entitlements"/>
+      <entry key="nativeChangeDetectionAttributes"/>
+      <entry key="nativeChangeDetectionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionOperations"/>
+      <entry key="parseType" value="delimited"/>
+      <entry key="partitionMode" value="auto"/>
+      <entry key="port"/>
+      <entry key="sftpAuthMethod" value="password"/>
+      <entry key="stopIfLineHasWrongColumnLength">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="sysDescriptions">
+        <value>
+          <Map>
+            <entry key="en_US"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="templateApplication" value="DelimitedFile Template"/>
+    </Map>
+  </Attributes>
+  <Schemas>
+    <Schema displayAttribute="USERNAME" identityAttribute="USERNAME" instanceAttribute="" nativeObjectType="DBA_USERS" objectType="account" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="USERNAME" type="string">
+        <Description>User name </Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="USER_ID" type="string">
+        <Description>User ID </Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="PASSWORD" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="ACCOUNT_STATUS" type="string">
+        <Description>Account status </Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="LOCK_DATE" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="EXPIRY_DATE" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="DEFAULT_TABLESPACE" type="string">
+        <Description>Default tablespace </Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="TEMPORARY_TABLESPACE" type="string">
+        <Description>Temporary tablespace </Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="CREATED" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition managed="true" name="PROFILE" type="string">
+        <Description>Profiles assigned to the user </Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="INITIAL_RSRC_CONSUMER_GROUP" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="EXTERNAL_NAME" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="PASSWORD_VERSIONS" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="EDITIONS_ENABLED" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="AUTHENTICATION_TYPE" type="string">
+        <Description>Authentication type </Description>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="ROLES" schemaObjectType="group" type="string">
+        <Description>Roles assigned to the user </Description>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="SYSTEM_PRIVILEGES" type="string">
+        <Description>System privileges assigned to the user </Description>
+      </AttributeDefinition>
+    </Schema>
+    <Schema descriptionAttribute="" displayAttribute="ROLE" featuresString="PROVISIONING" identityAttribute="ROLE" instanceAttribute="" nativeObjectType="DBA_ROLES" objectType="group" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="ROLE" type="string">
+        <Description>Role name </Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="PASSWORD_REQUIRED" remediationModificationType="None" type="string">
+        <Description>Password is required or not </Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="AUTHENTICATION_TYPE" remediationModificationType="None" required="true" type="string">
+        <Description>Authentication type </Description>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="ROLES" remediationModificationType="None" type="string">
+        <Description>Roles assigned to the role </Description>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="SYSTEM_PRIVILEGES" type="string">
+        <Description>System privileges assigned to the role </Description>
+      </AttributeDefinition>
+    </Schema>
+  </Schemas>
+  <ApplicationScorecard/>
+</Application>

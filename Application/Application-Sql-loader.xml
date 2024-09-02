@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Application connector="sailpoint.connector.JDBCConnector" featuresString="DISCOVER_SCHEMA, PROVISIONING, SYNC_PROVISIONING, DIRECT_PERMISSIONS, ENABLE, PASSWORD" icon="databaseIcon" name="SQL-Loader" profileClass="" type="SQLLoader">
+  <Attributes>
+    <Map>
+      <entry key="Entitlement Demo.SQL" value="select * from Roles;"/>
+      <entry key="Entitlement Demo.driverClass" value="com.hxtt.sql.text.TextDriver"/>
+      <entry key="Entitlement Demo.getDirectPermObjectSQL"/>
+      <entry key="Entitlement Demo.getObjectSQL"/>
+      <entry key="Entitlement Demo.isPermissionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="Entitlement Demo.mergeRows">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="Entitlement Demo.password" value="1:ACP:szZ/vwIvAhMmUCs2g4S43Lpyq6VnX0dpANPt68bFkGQ="/>
+      <entry key="Entitlement Demo.url" value="jdbc:csv:/C:\Sailpoint_IIQ_Materials\delimitedFile\Roles.txt"/>
+      <entry key="Entitlement Demo.useExecuteQuery">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="Entitlement Demo.user" value="Sudhan"/>
+      <entry key="SQL" value="select * from emp1;"/>
+      <entry key="additionalConnProperties">
+        <value>
+          <List>
+            <String>_CSV_Header=true</String>
+          </List>
+        </value>
+      </entry>
+      <entry key="afterProvisioningRule"/>
+      <entry key="beforeProvisioningRule"/>
+      <entry key="compositeDefinition"/>
+      <entry key="driverClass" value="com.hxtt.sql.text.TextDriver"/>
+      <entry key="isPermissionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="mergeRows">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionAttributeScope" value="entitlements"/>
+      <entry key="nativeChangeDetectionAttributes"/>
+      <entry key="nativeChangeDetectionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionOperations"/>
+      <entry key="partitionMode">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="partitionStatements"/>
+      <entry key="password" value="1:ACP:NFnz4IzYA0MLKbe2Sdy4ADQ1CTrnRyrfIGQdAgylmYU="/>
+      <entry key="provisionRule" value="globalRule"/>
+      <entry key="sysDescriptions">
+        <value>
+          <Map>
+            <entry key="en_US"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="templateApplication" value="SQLLoader Template"/>
+      <entry key="url" value="jdbc:csv:/C:\Sailpoint_IIQ_Materials\delimitedFile\emp1.txt"/>
+      <entry key="useExecuteQuery">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="user" value="Sudhan"/>
+    </Map>
+  </Attributes>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+  <Schemas>
+    <Schema displayAttribute="UNIQUENAME" identityAttribute="ID" instanceAttribute="" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="ID" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="UNIQUENAME" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="FIRSTNAME" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="LASTNAME" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="AGE" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="ACTIVE" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="COMPANY_NAME" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="COST_CENTER_REFERENCE_ID" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="LWD" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="DEPT" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+    <Schema aggregationType="group" descriptionAttribute="" displayAttribute="" identityAttribute="" instanceAttribute="" nativeObjectType="" objectType="Entitlement Demo" permissionsRemediationModificationType="None"/>
+  </Schemas>
+  <ApplicationScorecard/>
+</Application>
