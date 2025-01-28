@@ -6,7 +6,7 @@
         <entry key="connectorClass" value="openconnector.connector.aws.AWSConnectorSDK"/>
         <entry key="formPath" value="AWSForm.xhtml"/>
         <entry key="encrypted" value="secret,externalId"/>
-        <entry key="pageSize" value="100"/>
+        
       </Map>
     </Attributes>
     <Schemas>
